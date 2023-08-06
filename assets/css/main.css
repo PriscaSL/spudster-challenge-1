@@ -1,0 +1,216 @@
+;:root {
+
+}
+
+*, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/** header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 50px;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+header nav {
+    width: 70%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header nav ul li{
+    padding: 6px 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-button {
+    border: 1px solid black;
+}
+
+/** end header */
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* debut présentation */
+
+#presentation h1 {
+    font-size: 80px;
+}
+#presentation h3 {
+    font-weight: normal;
+    margin-top: 15px;
+    font-size: 26px;
+}
+#presentation .bar {
+    width: 60px;
+    height: 5px;
+    background-color: aquamarine;
+    margin-top: 20px;
+}
+
+/* debut articles */
+#articles {
+    padding-top: 100px;
+    background-color: burlywood;
+}
+
+#articles h3 {
+    font-weight: normal;
+    font-size: 26px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+article {
+    width: 25rem;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+article img {
+    width: 100%;
+    height: 50%;
+}
+
+article div {
+    padding: 30px 30px 0px 30px;
+    margin-top: 20px;
+}
+
+article p {
+    font-size: 20px;
+    padding: 20px 40px 20px 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article hr {
+    width: 15%;
+    height: 3px;
+    background-color: aquamarine;
+    border: none;
+}
+
+/* about */
+#about {
+    display: flex;
+}
+
+.left-content {
+    width: 50%;
+}
+.left-content img {
+    width: 100%;
+    height: 100%;
+}
+.right-content {
+    width: 50%;
+    padding: 80px;
+    text-align: justify;
+}
+.content h3 {
+    font-size: 24px;
+}
+.content p {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* subscribe */
+#subscribe {
+    background-color: rgb(115, 157, 123);
+}
+#subscribe div h3 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#subscribe div p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+#subscribe input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 400px;
+}
+
+#subscribe button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: transparent;
+    width: 200px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 50px;
+}
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul {
+    display: flex;
+}
+
+footer nav ul li {
+    padding: 30px;
+}
