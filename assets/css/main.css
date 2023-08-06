@@ -1,11 +1,16 @@
-;:root {
-
+:root {
+    --black-color: rgb(41, 41, 41);
+    --white-color: rgb(245, 245, 245);
+    --bar-color: rgb(120, 190, 69);
+    --yellow-color: #ffffca;
 }
 
 *, body {
+    letter-spacing: 0.1em;
     padding: 0;
+    color: var(--black-color);
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -21,14 +26,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 50px;
+    padding: 35px 60px;
 }
 
 .logo {
     text-decoration: none;
-    color: black;
+    color: var(--black-color);
     font-weight: bold;
-    font-size: 22px;
+    font-size: 28px;
+    letter-spacing: 0.2em;
+}
+.logo:hover {
+    color: var(--bar-color);
 }
 
 header nav {
@@ -48,11 +57,21 @@ header nav ul li{
 
 .nav-item {
     text-decoration: none;
-    color: black;
+    color: var(--black-color);
+}
+
+.nav-item:hover {
+    color: var(--bar-color)
 }
 
 .nav-button {
-    border: 1px solid black;
+    border: 1px solid var(--black-color);
+}
+.nav-button:hover {
+    border: 1px solid var(--bar-color);
+}
+.nav-button:hover .nav-item{
+    color: var(--bar-color);
 }
 
 /** end header */
@@ -83,11 +102,17 @@ section {
 }
 
 /* debut présentation */
-
+#presentation {
+    background-image: url("../image/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #presentation h1 {
     font-size: 80px;
+    color: var(--black-color);
 }
 #presentation h3 {
+    color: var(--black-color);
     font-weight: normal;
     margin-top: 15px;
     font-size: 26px;
@@ -95,14 +120,14 @@ section {
 #presentation .bar {
     width: 60px;
     height: 5px;
-    background-color: aquamarine;
+    background-color: var(--bar-color);
     margin-top: 20px;
 }
 
 /* debut articles */
 #articles {
     padding-top: 100px;
-    background-color: burlywood;
+    background-color: var(--yellow-color);
 }
 
 #articles h3 {
@@ -110,6 +135,7 @@ section {
     font-size: 26px;
 }
 .grid-container {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -117,8 +143,8 @@ section {
 article {
     width: 25rem;
     margin: 20px;
-    border: 1px solid black;
     border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 article img {
     width: 100%;
@@ -140,7 +166,7 @@ article p {
 article hr {
     width: 15%;
     height: 3px;
-    background-color: aquamarine;
+    background-color: var(--bar-color);
     border: none;
 }
 
@@ -151,6 +177,9 @@ article hr {
 
 .left-content {
     width: 50%;
+    background-image: url("../image/about.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .left-content img {
     width: 100%;
@@ -158,20 +187,26 @@ article hr {
 }
 .right-content {
     width: 50%;
-    padding: 80px;
     text-align: justify;
 }
 .content h3 {
     font-size: 24px;
 }
 .content p {
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     margin-top: 20px;
+}
+#about hr {
+    margin-top: 20px;
+    width: 10%;
+    height: 3px;
+    background-color: var(--bar-color);
+    border: none;
 }
 
 /* subscribe */
 #subscribe {
-    background-color: rgb(115, 157, 123);
+    background-color: var(--yellow-color);
 }
 #subscribe div h3 {
     font-size: 30px;
@@ -180,19 +215,26 @@ article hr {
 
 #subscribe div p {
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 #subscribe input {
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 15px;
+    padding: 14px;
     width: 400px;
 }
 
 #subscribe button {
-    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 16px;
     padding: 10px;
     background-color: transparent;
     width: 200px;
+}
+
+#subscribe button:hover {
+    color: var(--bar-color);
+    border: 2px solid var(--bar-color);
 }
 
 /* footer */
@@ -213,4 +255,9 @@ footer nav ul {
 
 footer nav ul li {
     padding: 30px;
+}
+.social-network img {
+    width: 30px;
+    margin: 10px;
+    border-radius: 100%;
 }
